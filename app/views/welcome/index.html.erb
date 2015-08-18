@@ -1,0 +1,94 @@
+
+
+<html>
+<head>
+<style>
+body{
+border-style: solid;
+    border-width: 2px;	
+}
+h1.one {
+    border-style: solid;
+    border-width: 5px;
+	margin-right: 100px;
+    margin-left: 90px;
+	background-color: #33CCFF;
+	color: white;
+	text-align: center;
+}
+
+h2 {
+margin-top: 80px;
+    margin-bottom: 100px;
+	 margin-right: 90px;
+    margin-left: 80px;
+	font-family : serif;
+   font-style: italic;
+   color: green;
+   line-height: 100%;
+   font-weight: bold;
+   text-align: center;
+}
+
+p.link {
+margin-top: 80px;
+    margin-bottom: 0px;
+   margin-right: 100px;
+    margin-left: 90px;
+    line-height: 200%;
+	text-align: center;
+}
+
+
+#button1 {float:left; }
+#button {float:right; }
+
+#help{
+display : none;
+color: #33CCFF;
+font-family : serif;
+   font-style: italic;
+    font-weight: normal;
+	
+	}
+
+</style>
+<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("button").click(function(){
+	
+
+$("#help").fadeToggle("slow","linear");
+});
+});
+
+</script>
+
+</head>
+<body>
+
+
+<h1 class="one">Crisis Social Media Trainer</h1>
+
+<h2 > Then new way to help emergency responders understand what information will be needed so you can plan ahead and learn how to make social media integral part of any 
+communication response.<h2>
+<div align= "center" style="margin-right: 20px;"><%= link_to image_tag("start1.png",:size =>"120x120", :border => 0, :alt => 'START', :title => 'Start'),{ controller: "tweets"} %></div>
+<br/>
+<div class="container">
+<div id="button1" ><%= link_to image_tag("Login.jpg",:size =>"130x130", :border => 0, :alt => 'LogIn', :title => ''),new_session_path %></div>
+
+
+<div id="button"><button><input type="image" src="/assets/help.jpg" alt="Submit" width="90" height="90"></button></div>
+</div>
+<br />
+<br />
+<p id="help" >Sometimes organizations are not prepared, nor organized for social media crisis. In this
+application, Crisis Social Media Trainer role-play help agencies those with less experience 
+of Social Media Crisis handling. Ultimate goal of this tool is to understand what information 
+will be needed so you can plan ahead and learn how to make social media integral part of any 
+communication response.</p>
+<!--<h3 id="linknew"><%= link_to 'Upload New Dataset', new_tweet_path %> </h3>-->
+</body>
+</html>
+

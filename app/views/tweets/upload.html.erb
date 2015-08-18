@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<style>
+body{
+border-style: solid;
+    border-width: 2px;	
+}
+h1.one {
+    border-style: solid;
+    border-width: 5px;
+	margin-right: 100px;
+    margin-left: 90px;
+	background-color: #33CCFF;
+	color: white;
+	text-align: center;
+}
+h2 {
+margin-top: 40px;
+    margin-bottom: 60px;
+	 margin-right: 90px;
+    margin-left: 80px;
+	font-family : serif;
+   font-style: italic;
+   color: green;
+   line-height: 100%;
+   font-weight: bold;
+   text-align: center;
+}
+h3 {
+margin-top: 10px;
+    margin-bottom: 80px;
+	 margin-right: 90px;
+    margin-left: 80px;
+	font-family : serif;
+   font-style: italic;
+   color: #CC00CC;
+   line-height: 100%;
+   text-align: center;
+}
+#userdetails{
+color: #F49A9A;
+}
+</style>
+<h1 class="one">Crisis Social Media Trainer</h1>
+
+ <!--<p id="userdetails">Logged in as <%= current_user.email %>.</p>-->
+ <table style= "width:140%; text-align:left;margin-left:0px;margin-top:60px;">
+  <tr>
+   <td> <div style= "margin-left:70px;"><%= link_to image_tag("back.jpg",:size =>"90x90", :border => 0, :alt => 'back',  title: 'click to go-back to Home page', rel: 'tooltip'),tweets_category_path %></div></td>
+   <td> <div ><%= link_to image_tag("11.png",:size =>"90x90", :border => 0, :alt => 'home',  title: 'redirect to Home page', rel: 'tooltip'),root_url %></div></td>
+  </tr>
+</table>
+<h2 >Upload Dataset</h2>
+<h3> On this page you can upload a custom file that contains social media messages around an emergency event. To work with Crisis Social Media Trainer, the custom file must be formatted  in a particular way.  
+<%= link_to 'Click Here', tweets_moreinfo_path %> for more information about the required file format. </h3>
+
+<%= form_tag import_tweets_path, multipart: true do %>   
+<table style= "width: 60%; text-align:center;margin-left:260px; margin-bottom:100px">
+<tr>
+    <th>File</th>
+    <th>Name</th>
+	<th>Description</th>
+  </tr>
+  <tr>
+    <td><%= file_field_tag :file %></td>
+	<td><%= text_field_tag :title %></td>
+	<td><%= text_field_tag :desc %></td>
+    <td><%= submit_tag "Upload" %><br></td>
+  </tr>
+</table>  
+  <% end %>
+  
+  
+  </html>

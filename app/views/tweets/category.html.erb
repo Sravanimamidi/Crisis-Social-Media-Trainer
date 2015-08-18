@@ -1,0 +1,215 @@
+
+
+<html>
+<head>
+<style>
+body{
+border-style: solid;
+    border-width: 2px;	
+}
+h1.one {
+    border-style: solid;
+    border-width: 5px;
+	margin-right: 100px;
+	margin-bottom: 0px;
+    margin-left: 90px;
+	background-color: #33CCFF;
+	color: white;
+	text-align: center;
+}
+
+h2 {
+	margin-top: 60px;
+    margin-bottom: 0px;
+	 margin-right: 90px;
+    margin-left: 80px;
+	font-family : serif;
+   font-style: italic;
+   color: #CC00CC;
+   line-height: 100%;
+   
+   text-align: center;
+}
+
+p.link {
+margin-top: 80px;
+    margin-bottom: 0px;
+   margin-right: 100px;
+    margin-left: 90px;
+    line-height: 200%;
+	text-align: center;
+}
+
+
+#button1 {float:left; }
+#button {float:right; }
+
+#help{
+	display : none;
+	color: #33CCFF;
+	font-family : serif;
+    font-style: italic;
+    font-weight: normal;
+	
+	}
+#userdetails{
+margin-top: 20px;
+    margin-bottom: 30px;
+   margin-right: 100px;
+   color: #33CCFF;
+    margin-left: 10px;
+    line-height: 200%;
+	text-align: center;
+}
+#x
+{
+color:black;
+background:#EAF2D3;
+height: 200px;
+align: center;
+margin-left: 100px;
+margin-right: 90px;
+font-size : 20px;
+border-collapse: collapse;
+ border: 1px solid black;
+}
+
+
+
+
+#button{
+   border: 1px solid #0a3c59;
+   background: #3e779d;
+   background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
+   background: -webkit-linear-gradient(top, #65a9d7, #3e779d);
+   background: -moz-linear-gradient(top, #65a9d7, #3e779d);
+   background: -ms-linear-gradient(top, #65a9d7, #3e779d);
+   background: -o-linear-gradient(top, #65a9d7, #3e779d);
+   background-image: -ms-linear-gradient(top, #65a9d7 0%, #3e779d 100%);
+   padding: 10.5px 21px;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #7ea4bd 0 1px 0;
+   
+   font-size: 14px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+#button:hover {
+   border: 1px solid #0a3c59;
+   text-shadow: #1e4158 0 1px 0;
+   background: #3e779d;
+   background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
+   background: -webkit-linear-gradient(top, #65a9d7, #3e779d);
+   background: -moz-linear-gradient(top, #65a9d7, #3e779d);
+   background: -ms-linear-gradient(top, #65a9d7, #3e779d);
+   background: -o-linear-gradient(top, #65a9d7, #3e779d);
+   background-image: -ms-linear-gradient(top, #65a9d7 0%, #3e779d 100%);
+   color: #fff;
+   }
+#button:active {
+   text-shadow: #1e4158 0 1px 0;
+   border: 1px solid #0a3c59;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#3e779d));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+   color: #fff;
+   }
+
+</style>
+<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("button1").click(function(){
+$("#help").fadeToggle("slow","linear");
+});
+});
+
+</script>
+
+</head>
+<body>
+
+
+<h1 class="one">Crisis Social Media Trainer</h1>
+
+<h2 > Crisis Social Media Trainer is a tool that helps emergency responders practice monitoring social
+media in a non-emergency setting. The goal of this tool is to help emergency responders 
+understand the types of information they might encounter over social media during an 
+emergency event.</h2>
+
+<br/>
+
+<br />
+<br />
+<p id="help" >Sometimes organizations are not prepared, nor organized for social media crisis. In this
+application, Crisis Social Media Trainer role-play help agencies those with less experience 
+of Social Media Crisis handling. Ultimate goal of this tool is to understand what information 
+will be needed so you can plan ahead and learn how to make social media integral part of any 
+communication response.</p>
+<!--<h3 id="linknew"><%= link_to 'Upload New Dataset', new_tweet_path %> </h3>-->
+
+<% if current_user %>
+    <p id="userdetails">Logged in as <%= current_user.email %>.</p>
+<% end %>
+<div class="container">
+
+<% if current_user %>
+    <!--<p id="userdetails">Logged in as <%= current_user.email %>.</p>-->
+<table style= "width:90%; text-align:center;margin-left:0px;margin-bottom:20px;">
+  <tr>
+    <td><div align= "center" style="margin-left: 20px; display:inline;"><button1 title="click to see about the app"><%= image_tag("help.jpg",:size =>"80x80") %></button1></div></td>
+    <td><div align= "center" style="margin-left: 20px;margin-bottom:0px; display: inline;"><%= link_to image_tag("upload.png",:size =>"80x80", :border => 0, :alt => 'upload',title: 'click to insert a dataset', rel: 'tooltip'),tweets_upload_path %></div></td>
+    <td><div align= "center" style="margin-left: 20px; display:inline;"><%= link_to image_tag("logout.jpg",:size =>"80x80", :border => 0, :alt => 'Logout',title: 'click to Logout', rel: 'tooltip' ),log_out_path %></div></td>
+  </tr>
+</table>
+<% else %>
+<table style= "width:90%; text-align:center;margin-left:0px;margin-bottom:20px;">
+  <tr>
+	<td><div style= "margin-left:0px;" ><%= link_to image_tag("Login.jpg",:size =>"170x170", :border => 0, :alt => 'login',title: 'click to LogIn', rel: 'tooltip'),new_session_path %></div></td>
+	<td><div  ><button1 title="click to see about the app"><%= image_tag("help.jpg",:size =>"170x170") %></button1></div></td>
+  </tr>
+  </table>
+	<% end %>
+
+</div>
+	
+<table id="x" style= "width: 80%; text-align:center;margin-left:130px;margin-bottom:120px;border: 1px solid black;">
+<colgroup><col /><col /><col /><col /></colgroup>
+ <%= form_tag tweets_setglobal_path, multipart: true do %>
+
+    <tr>
+       <th style= " border: 1px solid black;">Name</th>
+	   <th style= " border: 1px solid black;">Description</th>
+	   <th style= " border: 1px solid black;">View</th>
+	   
+       </tr>
+	  <% @data.each do |datae| %>       
+  <tr>
+    <td style= " border: 1px solid black;"><%= datae.name %></td>  
+    <td style= " border: 1px solid black;"><%= datae.description %></td>  
+	<td id="button"><%= submit_tag 'View Data', :name => "edit[#{datae.id}]"%><br></td>
+  </tr>
+<% end %>                       
+</table>
+	
+
+<% end %> 
+  
+ 
+</body>
+</html>
+
+
+
+
+

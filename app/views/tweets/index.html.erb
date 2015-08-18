@@ -1,0 +1,327 @@
+
+
+<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<!DOCTYPE html>
+<html>
+<head>
+<h1 class="one">Crisis Social Media Trainer </h1>
+</head>
+<style>
+
+table, th, td {
+    border: 1px solid grey;
+}
+td{
+padding: 10px;
+}
+#x
+{
+color:black;
+background:#EAF2D3;
+
+height: 200px;
+align: center;
+margin-left: 100px;
+margin-right: 90px;
+}
+#head{color:red;font:arial;font-size: 2em;background:black}
+#myRow{color:black;font:arial;font-size: 1.1em;background:#EAF2D3}
+
+html {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body,div,h1,table,tbody,thead,tr,th,td	
+{
+	margin: 15;
+	padding: 50;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 20;
+	height : 200px;
+	align: center;
+}
+
+
+table,th,td {
+	vertical-align: middle;
+	
+}
+h1.one {
+    border-style: solid;
+    border-width: 5px;
+	margin-right: 100px;
+    margin-left: 90px;
+	margin-top: 30px;
+    margin-bottom: 0px;
+	background-color: #33CCFF;
+	color: white;
+	font-weight: bold;
+	font-size : 33px;
+	text-align: center;
+}
+body{
+    border-style: solid;
+    border-width: 2px;
+	padding-bottom: 40px;
+	}
+#link
+{
+  
+   text-align: left;
+}
+span.spacing {
+    padding-left: 9px;
+    margin-left: 9px;
+    height: 10px;
+    border-left: 1px solid @border-color;
+}
+div.tweetwrapper {
+    padding: 15px 0;
+    border-bottom: 1px solid @border-color;
+&:last-child {
+    border: none;
+}
+}
+#Home
+{
+text-align: right;
+}
+#view
+{
+text-align: center;
+}
+#userdetails,h3{
+margin-top: 30px;
+    margin-bottom: 0px;
+   margin-right: 100px;
+   color: #33CCFF;
+    margin-left: 90px;
+    line-height: 200%;
+	text-align: center;
+}
+h3{color: #CC00CC;}
+img.avatar {
+    margin: 0 200px 0 20px;
+    float: left;
+}
+
+p.avatar {
+    margin: 50px 100px 0 90px;
+    padding: 0;
+    text-align: justify;
+    line-height: 1.5;
+    .antialiased(@text-color);
+}
+
+span.tweetwrapper {
+    &.name {
+        font-size: 18px;
+        color: #58B84E;
+    }
+ 
+    &.time {
+        font-size: 12px;
+        color: #CCC;
+    }
+}
+
+.wrapper {
+    margin-left:0px;
+}
+
+.button {
+    position: absolute:
+    top: 50%;
+}
+
+
+#logout{
+margin-bottom:0px;
+margin-left:0px;}
+
+.play{
+   border: 1px solid #0a3c59;
+   background: #3e779d;
+   background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
+   background: -webkit-linear-gradient(top, #65a9d7, #3e779d);
+   background: -moz-linear-gradient(top, #65a9d7, #3e779d);
+   background: -ms-linear-gradient(top, #65a9d7, #3e779d);
+   background: -o-linear-gradient(top, #65a9d7, #3e779d);
+   background-image: -ms-linear-gradient(top, #65a9d7 0%, #3e779d 100%);
+   padding: 10.5px 21px;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+   text-shadow: #7ea4bd 0 1px 0;
+   
+   font-size: 14px;
+   font-family: helvetica, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.play:hover {
+   border: 1px solid #0a3c59;
+   text-shadow: #1e4158 0 1px 0;
+   background: #3e779d;
+   background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
+   background: -webkit-linear-gradient(top, #65a9d7, #3e779d);
+   background: -moz-linear-gradient(top, #65a9d7, #3e779d);
+   background: -ms-linear-gradient(top, #65a9d7, #3e779d);
+   background: -o-linear-gradient(top, #65a9d7, #3e779d);
+   background-image: -ms-linear-gradient(top, #65a9d7 0%, #3e779d 100%);
+   color: #fff;
+   }
+.play:active {
+   text-shadow: #1e4158 0 1px 0;
+   border: 1px solid #0a3c59;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#3e779d));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+   color: #fff;
+   }
+
+
+</style>
+<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+function change() // no ';' here
+{
+    var elem = document.getElementById("myrow");
+    if (elem.value==" play") elem.value = "pause";
+    else if(elem.value = "pause") elem.value = " play";
+}
+
+function myFunction(resp)
+{
+     var tblBody = document.getElementById("myRow");
+		var row = tblBody.insertRow(0);
+		var a= row.insertCell(0);
+		a.innerHTML= '<img src ="' + resp.profileimg + '" alt = "Image Not Found"  style="border:3px;height:80px;width:80px;float: left">' ;
+		var x= row.insertCell(1); 
+		x.innerHTML= '<div style="color:SkyBlue;font-size:20px">'+ resp.fromUser+'</div>'+ '<div style="color:darkblack;font-size:20px">' + resp.content+ '</div>' +'<p style="color:grey;font-size:15px" align = "right">' + resp.time + '</p>';
+		var text = resp.content;
+		var n = text.search("http");
+		x.innerHTML+= n;
+		//x.innerHTML+= <a href=n>clickhere</a> 
+while (tblBody.rows.length>20)
+	{
+		document.getElementById("x").deleteRow(-1);
+	}
+}
+var myVar;
+function getText()
+{
+ $.ajax({
+      type: "GET",
+	   url: "/tweets/set_a",
+	   dataType: "json",
+      success:function(resp) {
+	  if(resp == null)
+		{
+		  myVar.clearInterval();
+		}
+		myFunction(resp);
+		return false;
+		},
+      error: function(data) {
+	    alert("there is an error");
+        return false;
+	}
+});       
+}
+
+window.onload = function()
+{
+var isPaused = false;
+var time = 0;
+var myVar = null; 
+myVar= setInterval(function(){
+if(!isPaused) getText()
+}, 4000);
+$('.play').on('click', function(e) {
+    e.preventDefault();
+    isPaused = !isPaused;
+});
+}
+
+</script>
+
+</head>
+
+<body>
+<h3>On this page, social media messages from the selected emergency event scroll down the page 
+in the order they were sent. You may pause, resume, or restart the flow of messages.</h3>
+<% if current_user %>
+<p id="userdetails">Logged in as <%= current_user.email %>.</p>
+<% end %>
+	<div id="nav">
+	<% if current_user %>
+	<table style= "width:90%; text-align:center;margin-left:0px;margin-bottom:0px;">
+  <tr>
+    <td><div id = "three"><%= link_to image_tag("restart.png",:size =>"60x60", :border => 0, :alt => 'view', title: 'Restart tweets from the beggining', rel: 'tooltip'),{ controller: "tweets"} %></div></td>
+	 <td><div class="wrapper" style="margin-left:10px;"><input id="myrow" onclick="change()" type="button" title="click to play/pause flow of tweets" value="pause" class="play"></div></td>
+	 <td><div id = "one"><%= link_to image_tag("upload.png",:size =>"70x70", :border => 0, :alt => 'newdataset',title: 'click to upload a dataset', rel: 'tooltip' ),tweets_upload_path  %></div></td>
+    <td><div id = "two"><%= link_to image_tag("11.png",:size =>"60x60", :border => 0, :alt => 'HOME', title: 'redirects to Home page', rel: 'tooltip'),root_url %></div> </td>
+	<td><p id="logout"><%= link_to image_tag("logout.jpg",:size =>"80x80", :border => 0, :alt => 'logout',title: 'click to logout', rel: 'tooltip'),log_out_path  %></p></td>
+	</tr>
+</table>
+    
+    <% else %>
+	<table style= "width:90%; text-align:center;margin-left:0px;margin-bottom:0px;">
+	<tr>
+	<td><div style="margin-left:0px;"><%= link_to image_tag("Login.jpg",:size =>"130x130", :border => 0, :alt => 'LogIn', title: 'click to login', rel: 'tooltip'),new_session_path %></div><td>
+	<td><div class="wrapper" style="margin-left:0px;"><input id="myrow" onclick="change()" type="button" title="click to play/pause flow of tweets" value="pause" class="play"></div></td>
+    <td><div id = "two"><%= link_to image_tag("11.png",:size =>"70x70", :border => 0, :alt => 'HOME', title: 'redirects to Home page', rel: 'tooltip'),root_url %></div> </td>
+	<td><div id = "three"><%= link_to image_tag("restart.jpg",:size =>"90x90", :border => 0, :alt => 'view', title: 'Restart tweets from the beggining', rel: 'tooltip'),{ controller: "tweets"} %></div></td>
+	</tr>
+	</table>
+	<% end %>
+	</div>
+	<div style="overflow: auto; height: 640px; width: 90%">
+
+<table id="x" style= "width: 90%;margin-top:0px;">
+<colgroup><col /><col /><col /><col /><col /><col /></colgroup>
+   <tbody id="myRow">
+    </tbody>
+</table>
+
+<!--
+<div class="tweetwrapper" id="myRow" >
+        <div id="myimg"></div>
+        <p div ="mycont"> </p>
+        <span class="name"><div id="myDIV"></div></span> <span class="time"><div id="myP"></div></span>
+        
+</div>
+-->
+
+</div>
+<pre>
+</pre>
+
+
+</body>
+
+</html>
+
+
+
+
+

@@ -1,0 +1,65 @@
+<style>
+body{
+border-style: solid;
+    border-width: 2px;	
+}
+h1.one {
+    border-style: solid;
+    border-width: 5px;
+	margin-right: 100px;
+    margin-left: 90px;
+	background-color: #33CCFF;
+	color: white;
+	text-align: center;
+}
+h2 {
+margin-top: 30px;
+    margin-bottom: 40px;
+	
+	font-family : serif;
+   font-style: italic;
+   color: green;
+   line-height: 100%;
+   font-weight: bold;
+   text-align: center;
+}
+#flash_error {
+ <!-- border: 1px solid #000066;-->
+ 
+   padding-right: 60px;
+  margin-left:280px;
+  margin-bottom: 10px;
+  text-align:center;
+  width: 55%;
+  background-color: #cc3333;
+
+}
+
+</style>
+<h1 class="one">Crisis Social Media Trainer</h1>
+<table style= "width:90%; text-align:center;margin-left:0px;margin-bottom:60px;">
+<tr>
+<td><div align= "center" style="margin-left: 50px;"><%= link_to image_tag("11.png",:size =>"60x60", :border => 0, :alt => 'HOME', title: 'redirects to Home page', rel: 'tooltip'),root_url %></div></td>
+<td><div align= "center" style="margin-right: 30px;"><%= link_to image_tag("back.jpg",:size =>"60x60", :border => 0, :alt => 'View', title: 'redirects to Home page', rel: 'tooltip'), root_url  %></div></td>
+</tr>
+</table>
+<h3 id = "flash_error">
+<% flash.each do |name, msg| %>
+ <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+</h3>
+<h2>Log in</h2>
+<div align= "center">
+<%= form_tag sessions_path do %>
+  <p>
+    <%= label_tag :email %><br />
+    <%= text_field_tag :email, params[:email] %>
+  </p>
+  <p>
+    <%= label_tag :password %><br />
+    <%= password_field_tag :password %>
+  </p>
+  <p class="button"><%= submit_tag "Log in" %></p>
+<% end %>
+<div align= "center" style="margin-left: 20px;"><%= link_to image_tag("signup1.jpg",:size =>"130x130", :border => 0, :alt => 'Signup', :title => ''),new_user_path %></div>
+</div>

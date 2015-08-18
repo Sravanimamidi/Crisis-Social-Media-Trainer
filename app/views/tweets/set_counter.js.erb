@@ -1,0 +1,21 @@
+<script>
+$(document).ready(function(){
+
+$.ajax({
+alert('Hello from AJAX');
+      type: "GET",
+      url: "/tweets/set_counter/",
+	  format: "js",
+      data: { counter :  @counter },
+      success:function(data) {
+        alert ("successful");
+        return false;
+		},
+      error: function(data) {
+	    alert("there is an error");
+        return false;
+	}
+		
+    });
+});
+</script>
